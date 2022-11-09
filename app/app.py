@@ -13,9 +13,11 @@ def home():
 def predict():
 
     body = request.get_json()
-
-    X = pd.DataFrame([body])
+    
+    X = pd.DataFrame(body)
     y = estimator.predict(X)
 
     return f'Feature, Predita {y}'
 
+if __name__ == '__main__':
+    app.run(host='127.0.0.1', port=8080, debug=True)
