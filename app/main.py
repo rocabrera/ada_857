@@ -11,9 +11,7 @@ def home():
 
 @app.route('/predict', methods=['POST'])
 def predict():
-
     body = request.get_json()
-    
     X = pd.DataFrame(body)
     y = estimator.predict(X)
 
