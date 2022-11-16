@@ -4,6 +4,27 @@
 python -m venv <nome da sua env>
 ```
 
+## Docker
+
+Se você estiver no ***folder*** que contém o arquivo Dockerfile:
+```
+docker image build -t <nome_imagem> .
+```
+
+Executa o container com o último comando da imagem: 
+```
+docker container run <nome_imagem>
+```
+
+Executa o container com o último comando da imagem alterado: 
+```
+docker container run -it <nome_imagem> <comando>
+
+Exemplo para entrar dentro do container (caso a imagem base tenha o comando bash):
+
+docker container run -it <nome_imagem> bash
+```
+
 ## GIT
 
 Commandos básicos:
@@ -22,3 +43,7 @@ Git para equipes:
 - git branch: <branch>
 - git merge:
 - ...
+
+## Tests
+
+pip install pytest
