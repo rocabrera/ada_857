@@ -17,11 +17,14 @@ docker container run <nome_imagem>
 ```
 
 Executa o container com o último comando da imagem alterado: 
+
 ```
 docker container run -it <nome_imagem> <comando>
+```
 
 Exemplo para entrar dentro do container (caso a imagem base tenha o comando bash):
 
+```
 docker container run -it <nome_imagem> bash
 ```
 
@@ -46,4 +49,8 @@ Git para equipes:
 
 ## Tests
 
+Instalando libs de tests:
+```
 pip install pytest
+```
+
