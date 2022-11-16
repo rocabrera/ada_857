@@ -1,4 +1,3 @@
-import sys
 import json
 import pandas as pd
 from flask import Flask, request, Response
