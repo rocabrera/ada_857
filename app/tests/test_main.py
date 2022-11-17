@@ -13,7 +13,7 @@ def test_predict(client, correct_input):
                            data=json.dumps(correct_input),
                            content_type="application/json")
  
-    assert {'predicts': '[0 2]'} == response.get_json()
+    assert {'predicts': '[0, 0]'} == response.get_json()
     assert 200 == response.status_code
     assert 'application/json' == response.content_type
 

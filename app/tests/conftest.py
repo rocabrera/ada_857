@@ -1,3 +1,16 @@
+# Must run before testing
+import sys
+from unittest.mock import Mock
+class FakeUtilities:
+
+    @staticmethod
+    def load_model():
+        estimator = Mock()
+        estimator.predict.return_value = [0,0]
+        return estimator
+
+sys.modules["src.utilities"] = FakeUtilities
+
 import json
 import pytest
 from main import app
