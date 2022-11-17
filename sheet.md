@@ -53,4 +53,11 @@ Instalando libs de tests:
 ```
 pip install pytest
 ```
-
+Executando os tests (a flag -s serve para printar no terminal):
+```
+pytest -s tests
+```
+No computador do professor:
+```
+python -m pytest -s tests
+```
