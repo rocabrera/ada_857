@@ -26,11 +26,7 @@ def home():
 @app.route('/predict', methods=['POST'])
 def predict():
     """
-<<<<<<< HEAD
-    batata
-=======
     Realiza a predição.
->>>>>>> e84a8bcdd8a277065b44b31288fd5476a345e9d1
     """
     try:
 
