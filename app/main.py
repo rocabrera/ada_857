@@ -22,6 +22,9 @@ def home():
 
 @app.route('/predict', methods=['POST'])
 def predict():
+    """
+    batata
+    """
     try:
 
         body:list = request.get_json()
