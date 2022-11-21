@@ -37,6 +37,11 @@ Commandos básicos:
 - ```git status```: Esse comando para entender o que está acontecendo.
 - ```git commit -m "mensagem obrigatória"```: bla bla
 
+Commandos Avançados:
+
+- ```git switch -c <nome_branch>```: cria uma branch 
+- ```git checkout -b <nome_branch>```: cria uma branch 
+
 Depois ... entender: 
 
 - git restore 

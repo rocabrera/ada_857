@@ -1,5 +1,5 @@
 import json
-import pandas as pd
+import numpy as np
 from flask import Flask, request, Response
 from src.utilities import load_model
 from src.exceptions import exception_handler, PredictionError
@@ -9,6 +9,7 @@ estimator = load_model()
 
 @app.errorhandler(Exception)
 def handle_bad_request(e):
+    print(e)
     return exception_handler(e)
 
 @app.route('/',  methods=['GET'])
@@ -23,8 +24,9 @@ def home():
 def predict():
     try:
 
-        body = request.get_json()
-        X = pd.DataFrame(body)
+        body:list = request.get_json()
+        
+        X = np.asarray([list(sample.values()) for sample in body])
         y = estimator.predict(X)
 
     except Exception:
