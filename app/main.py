@@ -14,6 +14,9 @@ def handle_bad_request(e):
 
 @app.route('/',  methods=['GET'])
 def home():
+    """
+    Home para checar se o servidor está de pé.
+    """
     return Response(
         response="ESTOU ESPERANDO REQUISICOES",
         status=200,
@@ -22,6 +25,9 @@ def home():
 
 @app.route('/predict', methods=['POST'])
 def predict():
+    """
+    Realiza a predição.
+    """
     try:
 
         body:list = request.get_json()
