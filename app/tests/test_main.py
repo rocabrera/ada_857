@@ -26,3 +26,4 @@ def test_invalid_predict(client, invalid_input):
     assert b"Check the body requisition" == response.data
     assert 400 == response.status_code
     assert 'application/text' == response.content_type
+    assert False
