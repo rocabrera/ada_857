@@ -1,9 +1,6 @@
 from flask import Response
-
-
 class PredictionError(Exception):
     pass
-
 
 def exception_handler(ex: Exception):
 
