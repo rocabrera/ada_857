@@ -1,6 +1,6 @@
 name: Python package
 
-on: 
+on:
   pull_request:
     branches: [master]
 
@@ -35,4 +35,4 @@ jobs:
 
       - name: Run linter
         working-directory: ./app
-        run: flake8 --ignore E501,E702 .
+        run: flake8 --ignore E501,E402 .
